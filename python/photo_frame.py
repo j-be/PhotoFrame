@@ -22,7 +22,7 @@ class Photos(object):
     def reload(self, _=None, __=None):
         print("Reloading photos")
         self.i = -1
-        photos = []
+        self.photos = []
         for (dirpath, dirnames, filenames) in os.walk(PHOTO_DIR):
             for f in filenames:
                 if f.endswith('.jpg') or f.endswith('.JPG') or f.endswith('.png') or f.endswith('.PNG'):
