@@ -12,7 +12,7 @@ from PIL import Image, ImageTk
 
 
 PHOTO_DIR = os.path.join(os.getenv('HOME'), 'Pictures')
-DELAY = 1000
+DELAY = 5000
 
 
 class Photos(object):
