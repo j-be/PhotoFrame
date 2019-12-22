@@ -8,6 +8,6 @@ then
 
   if [ "$(cat /tmp/before_sync.txt)" != "$(cat /tmp/after_sync.txt)" ]
   then
-    skill -USR1 "$(pgrep -f python photo_frame.py)"
+    skill -USR1 "$(pgrep -f 'python photo_frame.py')"
   fi
 fi
