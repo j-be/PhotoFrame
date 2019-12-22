@@ -77,10 +77,8 @@ def tick():
 def setup_tk():
     root = tkinter.Tk()
     tk_state.w, tk_state.h = root.winfo_screenwidth(), root.winfo_screenheight()
-    root.overrideredirect(1)
-    root.geometry("%dx%d+0+0" % (tk_state.w, tk_state.h))
-    root.focus_set()
-    root.bind("<Escape>", lambda e: (e.widget.withdraw(), e.widget.quit()))
+    root.attributes('-fullscreen', True)
+    root.config(cursor="none")
 
     tk_state.new_canvas(root)
     tk_state.canvas.after(1, tick)
