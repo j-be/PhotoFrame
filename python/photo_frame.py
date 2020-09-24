@@ -25,7 +25,7 @@ class Photos(object):
         self.photos = []
         for (dirpath, dirnames, filenames) in os.walk(PHOTO_DIR):
             for f in filenames:
-                if f.endswith('.jpg') or f.endswith('.JPG') or f.endswith('.png') or f.endswith('.PNG'):
+                if f.lower().endswith('.jpg') or f.lower().endswith('.jpeg') or f.lower().endswith('.png'):
                     self.photos += [os.path.join(PHOTO_DIR, f)]
             break
         shuffle(self.photos)
